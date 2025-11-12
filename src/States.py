@@ -1,11 +1,5 @@
 from typing import *
 
-class WeatherData(TypedDict):
-    """Represents the global weather conditions for the race."""
-    WeatherID: Literal[1, 2]
-    Weather: Literal["Dry", "Wet"]
-
-
 class TrackData(TypedDict):
     """Represents the static data for the selected track."""
     TrackID: Literal[1, 2, 3]
@@ -15,7 +9,6 @@ class TrackData(TypedDict):
     Medium_Deg: float
     Wet_Deg: float
 
-    Fuel_Consumption: float
 
 
 class TelemetryData(TypedDict):
@@ -29,11 +22,6 @@ class TelemetryData(TypedDict):
     Tyre: Literal["Soft", "Medium", "Wet"]
     TyreLaps: int
     TyreDegradation: float
-    FuelRemaining: float
-
-    BrakeTemp: float
-    engine_mode: str
-    drs_available: bool
     laps_remaining: int
     LastLapTime: float
 
@@ -42,18 +30,20 @@ class Car(TypedDict):
     """Represents a single car and its state."""
     CarPosition: int
     CarID: int
-    Team: str
-    Telemetry: TelemetryData
+    Team: Literal["McLaren","RedBull","Mercedes"]
+    Telemetry: Optional[TelemetryData]
     Driver: str
-    TyreStrat: str
-    PitStopLaps: List[int]
     TotalRaceTime: float
+    isUser: bool
 
 
 class GlobalState(TypedDict):
+    """This is the Global State of the Graph"""
+
     Cars: List[Car]
     Track: TrackData
-    Weather: WeatherData
+    Weather: Literal["Dry","Wet"]
     CurrentLap: int
     TotalLaps: int
     RaceOver: bool
+
