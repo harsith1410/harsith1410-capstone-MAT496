@@ -7,7 +7,17 @@ class TrackData(TypedDict):
 
     Soft_Deg: float
     Medium_Deg: float
+    Hard_Deg: float
     Wet_Deg: float
+
+    Soft_Lap: float
+    Medium_Lap: float
+    Hard_Lap: float
+    Wet_Lap: float
+
+    PitLoss: float
+    FuelLoss: float
+    TotalFuel: float
 
 
 
@@ -19,11 +29,12 @@ class TelemetryData(TypedDict):
     part of the GlobalState, passed to any node that needs them.
     This avoids redundant and potentially conflicting data.
     """
-    Tyre: Literal["Soft", "Medium", "Wet"]
+    Tyre: Literal["Soft","Medium","Hard","Wet"]
     TyreLaps: int
     TyreDegradation: float
     laps_remaining: int
     LastLapTime: float
+    FuelRemaining: float
 
 
 class Car(TypedDict):
@@ -41,8 +52,9 @@ class GlobalState(TypedDict):
     """This is the Global State of the Graph"""
 
     Cars: List[Car]
-    Track: TrackData
+    UserCar: Car
     Weather: Literal["Dry","Wet"]
+    Track: TrackData
     CurrentLap: int
     TotalLaps: int
     RaceOver: bool
