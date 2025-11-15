@@ -24,10 +24,6 @@ class TrackData(TypedDict):
 class TelemetryData(TypedDict):
     """
     Represents the dynamic telemetry for a single car.
-
-    Note: Removed TrackData and WeatherData from here, as they are
-    part of the GlobalState, passed to any node that needs them.
-    This avoids redundant and potentially conflicting data.
     """
     Tyre: Literal["Soft","Medium","Hard","Wet"]
     TyreLaps: int
