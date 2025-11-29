@@ -37,11 +37,19 @@ class Car(TypedDict):
     """Represents a single car and its state."""
     CarPosition: int
     CarID: int
-    Team: Literal["McLaren","RedBull","Mercedes"]
+    Team: str
     Telemetry: Optional[TelemetryData]
     Driver: str
     TotalRaceTime: float
+    SpeedDelta: float
     isUser: bool
+
+
+class RaceEvent(TypedDict):
+    Type: Literal["GREEN", "YELLOW_FLAG", "SAFETY_CAR", "VSC", "RAIN_CHANGE"]
+    Message: str
+    AffectedCarID: Optional[int]
+    Severity: float
 
 
 class GlobalState(TypedDict):
@@ -54,4 +62,6 @@ class GlobalState(TypedDict):
     CurrentLap: int
     TotalLaps: int
     RaceOver: bool
+    Event: RaceEvent
+
 
