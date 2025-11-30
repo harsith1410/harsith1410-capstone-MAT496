@@ -26,8 +26,7 @@ This project is an F1 race simulator designed to model complex race scenarios. I
 
 ## Video Summary
 
-Link : https://1drv.ms/v/c/7836e344b21102c4/IQAtItRsom-ySbfirTGuaSpyAWchDUwBPbup8z36fUK24eM?e=w0pNPh
-
+Link : https://1drv.ms/v/c/7836e344b21102c4/IQA_Mp_u_rrXTa5SF3UuMij6AR2pRJ8HJhwhOoK5oNyVUII?e=VQznHm
 
 ## Reason for picking up this project
 
