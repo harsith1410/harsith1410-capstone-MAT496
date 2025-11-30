@@ -24,6 +24,9 @@ The first purpose of the capstone project is to give a chance to revise all the 
 
 This project is an F1 race simulator designed to model complex race scenarios. It utilizes Langgraph to simulate strategic decisions, factoring in variables such as tyre degradation, weather conditions, and pit stop timing to predict potential race outcomes.
 
+## Video Summary
+
+Link : https://1drv.ms/v/c/7836e344b21102c4/IQAtItRsom-ySbfirTGuaSpyAWchDUwBPbup8z36fUK24eM?e=w0pNPh
 
 ## Reason for picking up this project
 
